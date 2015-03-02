@@ -35,7 +35,6 @@ public class FizzBuzzerTest {
         assertEquals("1", fizzBuzzer.execute(1));
         assertEquals("2", fizzBuzzer.execute(2));
         assertEquals("4", fizzBuzzer.execute(4));
-        assertEquals("7", fizzBuzzer.execute(7));
     }
 
 }

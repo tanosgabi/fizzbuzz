@@ -9,6 +9,10 @@ public class FizzBuzzer {
             executeString +="Wizz";
         if(num.matches("(.*)3(.*)"))
             executeString +="Fizz";
+        if(num.matches("(.*)5(.*)"))
+            executeString +="Buzz";
+        if(num.matches("(.*)7(.*)"))
+            executeString +="Wizz";
         if(executeString.equals("")) 
             executeString =num;
         return executeString;
