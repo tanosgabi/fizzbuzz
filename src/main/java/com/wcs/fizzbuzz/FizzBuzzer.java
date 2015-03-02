@@ -7,7 +7,9 @@ public class FizzBuzzer {
         String num=String.valueOf(number);
         if(number % 7==0)
             executeString +="Wizz";
-        else
+        if(num.matches("(.*)3(.*)"))
+            executeString +="Fizz";
+        if(executeString.equals("")) 
             executeString =num;
         return executeString;
     }
