@@ -9,7 +9,8 @@ public class FizzBuzzerTest {
 
     @Test
     public void executeShouldReturnWizzIfTheNumberIsDividableBy7() {
-        assertEquals("Wizz", fizzBuzzer.execute(7));
+        assertTrue(fizzBuzzer.execute(7).matches("Wizz"));
+        assertTrue(fizzBuzzer.execute(14).matches("Wizz"));
     }
 
     @Test
@@ -26,7 +27,7 @@ public class FizzBuzzerTest {
     
     @Test
     public void executeShouldReturnWizzIfFigureIncludes7() {
-        assertTrue(fizzBuzzer.execute(17).matches("Fizz"));
+        assertTrue(fizzBuzzer.execute(17).matches("Wizz"));
     }
 
     @Test
