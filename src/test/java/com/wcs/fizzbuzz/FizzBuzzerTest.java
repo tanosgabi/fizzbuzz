@@ -8,20 +8,25 @@ public class FizzBuzzerTest {
     private FizzBuzzer fizzBuzzer = new FizzBuzzer();
 
     @Test
-    public void executeShouldReturnFizzIfTheNumberIsDividableBy3() {
-        assertEquals("fizz", fizzBuzzer.execute(3));
+    public void executeShouldReturnWizzIfTheNumberIsDividableBy7() {
+        assertEquals("Wizz", fizzBuzzer.execute(7));
     }
 
     @Test
-    public void executeShouldReturnBuzzIfTheNumberIsDividableBy5() {
-        assertEquals("buzz", fizzBuzzer.execute(5));
-        assertEquals("buzz", fizzBuzzer.execute(10));
+    public void executeShouldReturnFizzIfFigureIncludes3() {
+        assertTrue(fizzBuzzer.execute(3).matches("Fizz"));
+        assertTrue(fizzBuzzer.execute(131).matches("Fizz"));
     }
 
     @Test
-    public void executeShouldReturnBuzzIfTheNumberIsDividableBy15() {
-        assertEquals("fizzbuzz", fizzBuzzer.execute(15));
-        assertEquals("fizzbuzz", fizzBuzzer.execute(30));
+    public void executeShouldReturnBuzzIfFigureIncludes5() {
+        assertTrue(fizzBuzzer.execute(5).matches("Buzz"));
+        assertTrue(fizzBuzzer.execute(151).matches("Buzz"));
+    }
+    
+    @Test
+    public void executeShouldReturnWizzIfFigureIncludes7() {
+        assertTrue(fizzBuzzer.execute(17).matches("Fizz"));
     }
 
     @Test
